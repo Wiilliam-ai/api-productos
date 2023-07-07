@@ -5,6 +5,12 @@ config()
 const app = express()
 app.use(express.json())
 
+app.get("/",(req,res)=>{
+    res.json({
+        message: "Welcome to api ucv - app movil",
+    })
+})
+
 app.get("/api/productos",listarProductos)
 app.get("/api/productos/enlatados",listarEnlatados)
 app.get("/api/productos/enlatados/:codigo",getEnlatado)
